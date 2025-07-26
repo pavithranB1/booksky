@@ -1,4 +1,19 @@
 //selecting popupbox popup overlay button
+var homeBtn = document.getElementById("homeBtn");
+var shutterClose = document.getElementById("shutterClose");
+
+homeBtn.addEventListener("click", function () {
+  shutterClose.style.display = "block";
+  setTimeout(() => {
+    shutterClose.style.transform = "translateY(0)";
+  }, 50);
+
+  // Wait for animation to complete, then redirect
+  setTimeout(() => {
+    window.location.href = "open.html";
+  }, 1250);
+});
+
 var popupoverlay = document.querySelector(".popup-overlay")
 var popupbox=document.querySelector(".popup-box")
 var addpopupbutton=document.getElementById("add-popup-button")
